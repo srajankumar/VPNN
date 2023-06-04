@@ -1,0 +1,225 @@
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+
+$primary: #4286b0;
+// $primary: #7886c8;
+
+body {
+  min-height: 100vh;
+  background: #e9eef2;
+}
+
+.logo {
+  color: $primary;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 10px 0;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  height: 77.5vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottomProgress {
+  height: 20px;
+  width: 100%;
+}
+
+.bottomButton {
+  width: 100%;
+  background: #326789;
+  color: #fff;
+  height: 60px;
+}
+
+.bottomButton:hover {
+  background: #28506a;
+  color: #fff;
+}
+
+.Button2 {
+  width: 85%;
+  background: #326789;
+  color: #fff;
+  height: 45px;
+}
+
+.Button2:hover {
+  background: #28506a;
+  color: #fff;
+}
+
+.Button {
+  background: #7886c8;
+  color: #fff;
+}
+
+.Button:hover {
+  background: #326789;
+  color: #fff;
+}
+
+@media (max-width: 450px) {
+  .button {
+    display: flex;
+    flex-direction: column;
+    height: 81.5vh;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.toggle-button {
+  margin: 0 20px;
+}
+
+/*
+ * Toggle button styles
+ */
+.toggle-button {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+}
+.toggle-button label {
+  display: inline-block;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: left;
+}
+.toggle-button input {
+  display: none;
+}
+.toggle-button__icon {
+  cursor: pointer;
+  pointer-events: none;
+}
+.toggle-button__icon:before,
+.toggle-button__icon:after {
+  content: "";
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transition: 0.2s ease-out;
+}
+
+/*
+ * Toggle button variables
+ */
+/*
+ * Toggle button styles
+ */
+.toggle-button--aava label {
+  height: 50px;
+  line-height: 50px;
+  transition: all 0.2s;
+  border-radius: 2rem;
+}
+.toggle-button--aava label:before,
+.toggle-button--aava label:after {
+  position: absolute;
+  right: 1.5rem;
+  transition: all 0.2s 0.1s ease-out;
+}
+.toggle-button--aava label:before {
+  content: attr(data-on-text);
+}
+.toggle-button--aava label:after {
+  content: attr(data-off-text);
+}
+
+.toggle-button--aava input[type="checkbox"] + label {
+  width: 250px;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  background: #e65c4f;
+}
+.toggle-button--aava input[type="checkbox"] + label:before {
+  opacity: 0;
+  transform: translate(0, 20px);
+}
+.toggle-button--aava input[type="checkbox"] + label:after {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.toggle-button--aava input[type="checkbox"]:checked ~ label {
+  width: 250px;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #38a55e;
+}
+.toggle-button--aava input[type="checkbox"]:checked ~ label:before {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.toggle-button--aava input[type="checkbox"]:checked ~ label:after {
+  opacity: 0;
+  transform: translate(0, -20px);
+}
+
+.toggle-button--aava
+  input[type="checkbox"]:checked
+  ~ .toggle-button__icon:before {
+  transform: translate(-10%, 100%) rotate(45deg);
+  width: 16.66667px;
+}
+
+.toggle-button--aava
+  input[type="checkbox"]:checked
+  ~ .toggle-button__icon:after {
+  transform: translate(30%) rotate(-45deg);
+}
+
+.toggle-button--aava .toggle-button__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 50px;
+}
+.toggle-button--aava .toggle-button__icon:before,
+.toggle-button--aava .toggle-button__icon:after {
+  height: 3px;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.toggle-button--aava .toggle-button__icon:before {
+  width: 25px;
+  transform: rotate(45deg);
+}
+.toggle-button--aava .toggle-button__icon:after {
+  width: 25px;
+  transform: rotate(-45deg);
+}
